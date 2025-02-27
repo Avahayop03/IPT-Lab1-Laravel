@@ -12,39 +12,27 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::get();
+        return response()->json("SUCCESS");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        User::create($request);
-        return true;
+        return response()->json("SUCCESS");
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        return response()->json("SUCCESS");
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        return response()->json("SUCCESS");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        return response()->json("SUCCESS");
     }
+
 }
