@@ -8,42 +8,18 @@ use Illuminate\Http\Request;
 class ClassroomStudentController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Assign a student to a classroom.
      */
-    public function index()
+    public function assignStudent($classroom_id, $student_id)
     {
-        //
+        return response()->json(['message' => "Assign route accessed for classroom ID: $classroom_id, student ID: $student_id"]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Remove a student from a classroom.
      */
-    public function store(Request $request)
+    public function removeStudent($classroom_id, $student_id)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return response()->json(['message' => "Remove route accessed for classroom ID: $classroom_id, student ID: $student_id"]);
     }
 }
