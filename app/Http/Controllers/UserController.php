@@ -12,7 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return User::get();
     }
 
     /**
@@ -20,7 +20,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request);
+        return true;
     }
 
     /**

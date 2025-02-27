@@ -1,8 +1,11 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
-use Illuminate\Support\Facades\Artisan;
+namespace App\Http\Controllers;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+abstract class Controller
+{
+    //
+    public function test() {
+        return 'test'; //method
+    }
+}
